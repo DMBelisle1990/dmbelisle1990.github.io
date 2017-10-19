@@ -1,0 +1,29 @@
+/*
+ * VARIABLES
+ */
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #555;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1, h2 {
+  margin: 0 0 0.2em;
+}
+
+h1 {
+  color: var(--primary-color);
+}
