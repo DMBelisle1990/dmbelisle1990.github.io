@@ -29,6 +29,10 @@
 :root {
   --primary-color: #1B1B1B;
   --secondary-color: #636363;
+  --github: black;
+  --work: #4CAF50;
+  --contact: #FF5722;
+  --resume: #607D8B
 }
 
 
@@ -47,6 +51,7 @@ body {
 body > div {
   width: 70%;
   max-width: 580px;
+  overflow: hidden;
 }
 
 h1 {
@@ -69,6 +74,10 @@ p {
   margin: 0;
 }
 
+ul {
+  padding-left: 1em;
+}
+
 li {
   list-style-type: none;
   padding: 0 1em 0 0;
@@ -87,19 +96,39 @@ li::after {
   content: '';
   display: block;
   border-bottom: solid 3px #019fb6;
+  position: relative;
+  left: 2.8em;
   transform: scaleX(0);
   -webkit-transition: transform 0.2s ease-in-out;
   -moz-transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
+  transform-origin: 0% 50%;
+}
+
+#github::after {
+  border-color: var(--github);
+}
+
+#resume::after {
+  border-color: var(--resume);
+  left: 3em;
+}
+
+#contact::after {
+  border-color: var(--contact);
+}
+
+#work::after {
+  border-color: var(--work);
+  left: 3.3em;
 }
 
 li:hover::after {
   transform: scaleX(1);
-  transform-origin: 0% 50%;
 }
 
 li a {
-  display: inline-block;
+  display: flex;
   height: 100%;
   padding: 1.5em 0 0.5em;
   text-decoration: none;
@@ -107,6 +136,29 @@ li a {
 
 li:first-of-type a {
   padding-top: 1em;
+}
+
+i.fa {
+  font-size: 2.5em;
+  margin-right: 0.3em;
+  position: relative;
+  top: 0.1em;
+}
+
+i.fa-github {
+  color: var(--github);
+}
+
+i.fa-download {
+  color: var(--resume);
+}
+
+i.fa-envelope-square {
+  color: var(--contact);
+}
+
+i.fa-flask {
+  color: var(--work);
 }
 
 .nav-header {

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>banner</title>
+  <link rel="stylesheet" href="index.css">
+  <meta name="viewport" content="width=300, height=600, initial-scale=1.0">
+  <script>
+    var clickTag = "http://www.marriott.com/";
+
+    function clickThrough() {
+      // window.open(clickTag);
+    }
+  </script>
+  <style>
+    div.accessible {
+      position: absolute;
+      left: 110%;
+      top: -3000px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="banner" class="page-size" onclick="clickThrough()">
+    <img id="background" src="assets/background.jpg" alt="Relaxing view of pool">
+    <div id="bonusPtsWhite">
+      <div class="accessible">Limited Time - 80,000 Bonus points</div>
+    </div>
+    <div id="bonusPtsDark"></div>
+    <img id="grey-bar" src="assets/greybar.png">
+    <div id="fivePts" class="sprite">
+      <div class="accessible">5 points per $1 spent at Marriott</div>
+    </div>
+    <div id="freeNight" class="sprite">
+      <div class="accessible">Plus a free night stay every year</div>
+    </div>
+    <div id="learnMore" class="sprite">
+      <div class="accessible">Learn More</div>
+    </div>
+    <div id="card">
+      <img src="assets/card.png" alt="Marriott REWARDS Silver Card">
+      <div id="cardShine"></div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TimelineLite.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
