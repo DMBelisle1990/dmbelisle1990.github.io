@@ -45,6 +45,7 @@ body {
   height: 100vh;
   justify-content: center;
   margin: 0;
+  overflow: hidden;
   padding: 0;
   position: relative;
 }
@@ -60,20 +61,10 @@ body {
   transition: right 0.2s ease-in;
 }
 
-#temp {
-  cursor: pointer;
-  left: 100%;
-  position: absolute;
-  top: 10%;
-  -webkit-transition: left 0.2s ease-in;
-  -moz-transition: left 0.2s ease-in;
-  transition: left 0.2s ease-in;
-}
-
 h1 {
   color: var(--secondary-color);
   font-family: LatoLight;
-  font-size: 1.8em;
+  font-size: 1.7em;
   margin: 0;
 }
 
@@ -192,3 +183,59 @@ i.fa-cog {
   font-family: LatoLight;
 }
 
+/*
+ * WORK
+ */
+
+#work-content {
+  cursor: pointer;
+  left: 100%;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  -webkit-transition: left 0.2s ease-in;
+  -moz-transition: left 0.2s ease-in;
+  transition: left 0.2s ease-in;
+}
+
+#work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 760px;
+  padding-top: 6em;
+}
+
+#return-home {
+  position: absolute;
+  top: 6%;
+  left: 2%;
+}
+
+.preview {
+  border: 1px solid #bfbfbf;
+  position: relative;
+}
+
+.preview img {
+  display: block;
+}
+
+.preview-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-transition: opacity 0.1s linear;
+  -moz-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+}
+
+.preview-overlay:hover {
+  opacity: 1;
+}

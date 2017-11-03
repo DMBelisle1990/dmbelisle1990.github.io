@@ -1,12 +1,13 @@
 let content = document.getElementById('content');
 let work = document.getElementById('work');
-let temp = document.getElementById('temp');
+let workContent = document.getElementById('work-content');
+let returnHome = document.getElementById('return-home');
 work.addEventListener('click', () => {
   content.style.right = '100%';
-  temp.style.left = '10%';
+  workContent.style.left = '0%';
 });
 
-temp.addEventListener('click', () => {
+returnHome.addEventListener('click', () => {
   content.style.right = '0';
-  temp.style.left = '100%';
+  workContent.style.left = '100%';
 });
