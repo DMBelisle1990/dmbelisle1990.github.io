@@ -50,6 +50,11 @@ body {
   position: relative;
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 #content {
   max-width: 580px;
   overflow: hidden;
@@ -75,6 +80,10 @@ h2 {
   font-size: 2.1em;
   margin: 0 0 0.2em;
   padding: 0 3em 0.1em 0;
+}
+
+h3 {
+  margin: 0 0 0.3em;
 }
 
 p {
@@ -138,7 +147,6 @@ li a {
   display: flex;
   height: 100%;
   padding: 1.5em 0 0.5em;
-  text-decoration: none;
 }
 
 li:first-of-type a {
@@ -188,7 +196,6 @@ i.fa-cog {
  */
 
 #work-content {
-  cursor: pointer;
   left: 100%;
   position: absolute;
   height: 100vh;
@@ -198,17 +205,15 @@ i.fa-cog {
   transition: left 0.2s ease-in;
 }
 
-#work-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2em;
-  justify-items: center;
+#work-portfolio {
   margin: 0 auto;
   max-width: 760px;
   padding-top: 6em;
 }
 
 #return-home {
+  cursor: pointer;
+  padding: 0.5em;
   position: absolute;
   top: 6%;
   left: 2%;
@@ -244,6 +249,7 @@ i.fa-cog {
           transform-origin: right top;
   box-shadow: inset 0 0 0 32px;
 }
+
 .arrow:after {
   width: 4px;
   height: 4px;
@@ -252,28 +258,18 @@ i.fa-cog {
   box-shadow: inset 0 0 0 32px, 16px 17px;
 }
 
-.preview {
-  border: 1px solid #bfbfbf;
-  position: relative;
+.project {
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(0,0,0,0.125);
+  display: flex;
+  padding: 0 2em 4em;
 }
 
-.preview img {
-  display: block;
+.project a {
+  color: #0096cc;
+  font-size: 0.85em;
 }
 
-.preview-overlay {
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  -webkit-transition: opacity 0.1s linear;
-  -moz-transition: opacity 0.1s linear;
-  transition: opacity 0.1s linear;
-}
-
-.preview-overlay:hover {
-  opacity: 1;
+.project-details {
+  padding: 0 2em;
 }
