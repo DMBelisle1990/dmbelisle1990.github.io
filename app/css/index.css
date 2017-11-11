@@ -83,7 +83,9 @@ h2 {
 }
 
 h3 {
-  margin: 0 0 0.3em;
+  margin: 0 0 0.1em;
+  font-family: Montserrat;
+  font-size: 1.75em;
 }
 
 p {
@@ -197,6 +199,8 @@ i.fa-cog {
 
 #work-content {
   left: 100%;
+  overflow: scroll;
+  padding: 0 0 5em;
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -262,14 +266,35 @@ i.fa-cog {
   align-items: flex-start;
   border-bottom: 1px solid rgba(0,0,0,0.125);
   display: flex;
-  padding: 0 2em 4em;
+  padding: 3em 2em 4em;
+}
+
+.project:last-of-type {
+  border-bottom: none;
 }
 
 .project a {
   color: #0096cc;
+  display: block;
   font-size: 0.85em;
+  margin-bottom: 2em;
+}
+
+.project-img {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.project-img img {
+  width: 12em;
 }
 
 .project-details {
+  flex: 1 1 60%;
   padding: 0 2em;
+}
+
+.project-details p {
+  font-family: LatoLight;
+  line-height: 1.5;
 }
