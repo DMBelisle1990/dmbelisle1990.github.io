@@ -25,7 +25,7 @@ html, body {
 }
 
 .sprite {
-    background: url(assets/sprite.png);
+    background: url(images/sprite.png);
     position: absolute;
     top: 0;
     left: 0;
@@ -84,7 +84,7 @@ img#mag-glass {
     height: 168px;
     border-radius: 50px;
     -webkit-border-radius: 50px;
-    background: url('assets/zoom.png') fixed no-repeat #004990;
+    background: url('images/zoom.png') fixed no-repeat #004990;
     background-attachment: fixed;
     background-position: -366px -78px;
     top: 15px;
@@ -146,3 +146,4 @@ button#your-grade:hover {
     top: 182px;
     left: 37px;
 }
+

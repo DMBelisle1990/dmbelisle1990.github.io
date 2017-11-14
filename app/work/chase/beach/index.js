@@ -2,12 +2,6 @@
   const NUM_SLICES = 203;
   let bonusPtsDark = document.getElementById('bonusPtsDark');
   let tl = new TimelineLite();
-  
-  function pauseAnimation(e) {
-    if (e.keyCode == '32') {
-      tl.paused() ? tl.play() : tl.pause();
-    }
-  }
 
   function shineText() {
     let spans = [];

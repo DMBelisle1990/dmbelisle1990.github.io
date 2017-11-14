@@ -219,8 +219,8 @@ i.fa-cog {
   cursor: pointer;
   padding: 0.5em;
   position: absolute;
-  top: 6%;
-  left: 2%;
+  top: 3.7em;
+  left: 1.4em;
 }
 
 .arrow {
@@ -266,7 +266,7 @@ i.fa-cog {
   align-items: flex-start;
   border-bottom: 1px solid rgba(0,0,0,0.125);
   display: flex;
-  padding: 3em 2em 4em;
+  padding: 4em 2em 5em;
 }
 
 .project:last-of-type {
@@ -275,7 +275,7 @@ i.fa-cog {
 
 .project a {
   color: #0096cc;
-  display: block;
+  display: inline-block;
   font-size: 0.85em;
   margin-bottom: 2em;
 }
@@ -296,5 +296,10 @@ i.fa-cog {
 
 .project-details p {
   font-family: LatoLight;
+  font-size: 1.1em;
   line-height: 1.5;
+}
+
+#dex-ss {
+  margin-bottom: 1em;
 }
