@@ -1,7 +1,7 @@
-let content = document.getElementById('content');
-let work = document.getElementById('work');
-let workContent = document.getElementById('work-content');
-let returnHome = document.getElementById('return-home');
+var content = document.getElementById('content');
+var work = document.getElementById('work');
+var workContent = document.getElementById('work-content');
+var returnHome = document.getElementById('return-home');
 work.addEventListener('click', () => {
   content.style.right = '100%';
   workContent.style.left = '0%';
