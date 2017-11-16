@@ -41,7 +41,8 @@ body {
   align-items: center;
   color: var(--primary-color);
   display: flex;
-  font-family: Lato;
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-weight: 100;
   height: 100vh;
   justify-content: center;
   margin: 0;
@@ -300,6 +301,23 @@ i.fa-cog {
   line-height: 1.5;
 }
 
+.project-details a:hover {
+  color: #91b3bf;
+}
+
 #dex-ss {
   margin-bottom: 1em;
+}
+
+/*
+ * MODAL
+ */
+
+#modal-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
 }
