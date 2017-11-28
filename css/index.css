@@ -125,6 +125,10 @@ li::after {
   transform-origin: 0% 50%;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 #github::after {
   border-color: var(--github);
 }
