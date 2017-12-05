@@ -341,6 +341,7 @@ i.fa-cog {
   right: 0;
   background: rgba(0,0,0,0.5);
   visibility: hidden;
+  z-index: 5;
 }
 
 #modal {
@@ -349,6 +350,7 @@ i.fa-cog {
   height: 85%;
   width: 85%;
   position: relative;
+  z-index: 10;
 }
 
 .open-modal {
