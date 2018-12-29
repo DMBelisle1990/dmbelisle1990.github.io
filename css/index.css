@@ -1,28 +1,4 @@
 /*
- * FONTS
- */
-
-@font-face {
- font-family: 'Lato';
- src: url('../assets/fonts/Lato/Lato-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'LatoLight';
-  src: url('../assets/fonts/Lato/Lato-Light.ttf');
-}
-
-@font-face {
-  font-family: 'LatoBold';
-  src: url('../assets/fonts/Lato/Lato-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../assets/fonts/Montserrat/Montserrat-SemiBold.ttf');
-}
-
-/*
  * VARIABLES
  */
 
@@ -302,7 +278,7 @@ i.fa-cog {
 }
 
 .project-img img {
-  width: 12em; 
+  width: 12em;
 }
 
 .project-details {
