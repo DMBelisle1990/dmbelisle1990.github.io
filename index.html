@@ -10,8 +10,35 @@
   <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon" />
   <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
 
-  <script src="js/index.js" async></script>
+<body>
+  <section id="desktop">
+    <div id="terminal" class="panel">
+      <div id="terminal-header" class="panel-header">
+        <div class="terminal-button red"></div>
+        <div class="terminal-button yellow"></div>
+        <div class="terminal-button green"></div>
+      </div>
+      <div id="terminal-body">
+        <p>$ <span id="name"></span></p>
+      </div>
+    </div>
+    <div id="chrome" class="panel">
+      <div class="panel-header"></div>
+    </div>
+    <div id="dock">
+      <div id="work">
+        <img src="./assets/images/chrome-icon.svg">
+      </div>
+      <div id="contact">
+        <img src="./assets/images/chrome-icon.svg">
+      </div>
+      <div id="about">
+        <img src="./assets/images/chrome-icon.svg">
+      </div>
+    </div>
+  </section>
+  <script src="js/drag.js" async></script>
+  <script src="js/terminal.js" async></script>
 </body>
 </html>
