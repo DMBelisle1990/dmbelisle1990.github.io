@@ -8,6 +8,7 @@
 }
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   position: relative;
@@ -16,16 +17,34 @@ body {
 #desktop {
   align-items: center;
   background: rgb(220, 220, 220);
-  background-image: url(../assets/images/mojave-night.jpg);
+  background-image: url(../assets/images/desktop-bg.jpeg);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  overflow: hidden;
   position: relative;
+  touch-action: none;
+  user-select: none;
+}
+
+.last-clicked {
+  z-index: 1000;
 }
 
 .panel {
   position: absolute;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.2rem 2.1rem rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel:hover,
+.panel:active {
+  overflow: hidden;
+  resize: both;
 }
 
 .panel-header {
@@ -43,8 +62,6 @@ body {
 
 #terminal {
   background: var(--terminal-bg);
-  border-radius: 0.5rem;
-  box-shadow: 0.1rem 0.2rem 2.1rem rgba(0,0,0,0.4);
   color: white;
   display: flex;
   flex-direction: column;
@@ -55,32 +72,42 @@ body {
   width: 50rem;
   touch-action: none;
   user-select: none;
+  z-index: 2;
 }
 
 #terminal-header {
 
 }
 
-.terminal-button {
+.panel-button {
   border-radius: 50%;
   margin-right: 0.4rem;
   height: 0.75rem;
   width: 0.75rem;
 }
 
-.terminal-button.red {
+.panel-button.red {
   background: #f96256;
   border: 1px solid #f65549;
 }
 
-.terminal-button.yellow {
+.panel-button.yellow {
   background: #fdbc3d;
   border: 1px solid #ffb524;
 }
 
-.terminal-button.green {
+.panel-button.green {
   background: #33c948;
   border: 1px solid #2dbb41;
+}
+
+.panel-body {
+  flex: 1;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
 }
 
 #terminal-body {
@@ -118,19 +145,15 @@ p {
 }
 
 #chrome {
-  height: 500px;
-  width: 500px;
-  background: red;
-}
-
-#chrome .panel-header {
-  width: 100%;
-  height: 20px;
+  height: 600px;
+  width: 600px;
+  background: #fff;
 }
 
 #dock {
+  align-items: center;
   background-color: rgba(235,235,235,0.7);
-  padding: 0.5rem;
+  padding: 0.5rem 0 0.5rem 0.8rem;
   border: 1px solid rgba(0,0,0,0.1);
   border-radius: 0.5rem 0.5rem 0 0;
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.25);
@@ -139,18 +162,90 @@ p {
   display: flex;
   position: fixed;
   bottom: 0;
+  z-index: 2000;
+}
+
+#dock > div {
+  position: relative;
+}
+
+.dock-title {
+  border-radius: 0.3rem;
+  background-color: rgba(215,215,215,1);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.25);
+  color: rgb(60,60,60);
+  padding: 0.25rem 0.9rem;
+  position: absolute;
+  top: -3.4rem;
+  visibility: hidden;
+}
+
+.dock-title::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -0.4rem;
+  width: 0;
+  height: 0;
+  border-top: solid 0.4rem rgba(215,215,215,1);
+  border-left: solid 0.4rem transparent;
+  border-right: solid 0.4rem transparent;
+}
+
+#dock > div:hover .dock-title {
+  visibility: visible;
+}
+
+#dock div:first-of-type .dock-title {
+  right: 0.2rem;
+}
+
+#dock div:nth-of-type(2) .dock-title {
+  top: -3.15rem;
+  right: -0.1rem;
+}
+
+#dock div:nth-of-type(3) .dock-title {
+  top: -3.3rem;
+  right: -0.1rem;
+}
+
+#dock div:last-of-type .dock-title {
+  top: -3.15rem;
 }
 
 #dock img {
-  max-width: 4rem;
+  max-width: 4.5rem;
 }
 
-#work {
+#dock img:hover {
+  cursor: pointer;
+}
 
+#dock div img {
+  margin-right: 0.4rem;
+}
+
+#contact {
+  margin-right: 0.8rem;
 }
 
 #work img {
-  max-width: 4rem;
+  width: 4.5rem;
+}
+
+#about img {
+  width: 4rem;
+}
+
+#contact img {
+  width: 4.2rem;
+}
+
+#trash {
+  border-left: 1px solid #868686;
+  padding-left: 0.4rem;
 }
 
 @media only screen and (max-width: 568px)  {

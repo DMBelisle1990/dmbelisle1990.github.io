@@ -15,30 +15,47 @@
   <section id="desktop">
     <div id="terminal" class="panel">
       <div id="terminal-header" class="panel-header">
-        <div class="terminal-button red"></div>
-        <div class="terminal-button yellow"></div>
-        <div class="terminal-button green"></div>
+        <div class="panel-button red"><span></span></div>
+        <div class="panel-button yellow"></div>
+        <div class="panel-button green"></div>
       </div>
       <div id="terminal-body">
         <p>$ <span id="name"></span></p>
       </div>
     </div>
     <div id="chrome" class="panel">
-      <div class="panel-header"></div>
+      <div id="chrome-header" class="panel-header">
+        <div class="panel-button red"></div>
+        <div class="panel-button yellow"></div>
+        <div class="panel-button green"></div>
+      </div>
+      <div class="panel-body">
+        <!-- <iframe src="https://www.abcmouse.com" frameborder="0"></iframe> -->
+      </div>
     </div>
     <div id="dock">
+      <div id="about">
+        <div class="dock-title">About</div>
+        <img src="./assets/images/terminal-icon.svg">
+      </div>
       <div id="work">
+        <div class="dock-title">Projects</div>
         <img src="./assets/images/chrome-icon.svg">
       </div>
       <div id="contact">
-        <img src="./assets/images/chrome-icon.svg">
+        <div class="dock-title">Contact</div>
+        <a href="mailto:danielmbelisle@gmail.com">
+          <img src="./assets/images/gmail-icon.svg">
+        </a>
       </div>
-      <div id="about">
-        <img src="./assets/images/chrome-icon.svg">
+      <div id="trash">
+        <div class="dock-title">Trash</div>
+        <img src="./assets/images/trash-icon.png">
       </div>
     </div>
   </section>
   <script src="js/drag.js" async></script>
   <script src="js/terminal.js" async></script>
+  <script src="js/click.js" async></script>
 </body>
 </html>
