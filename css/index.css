@@ -67,8 +67,8 @@ body {
   flex-direction: column;
   font-size: 3.2rem;
   font-family: "Courier New", "Courier";
-  height: 42.5rem;
-  width: 60rem;
+  height: 22.5rem;
+  width: 38rem;
   touch-action: none;
   user-select: none;
   z-index: 2;
