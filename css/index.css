@@ -67,21 +67,23 @@ body {
   flex-direction: column;
   font-size: 3.2rem;
   font-family: "Courier New", "Courier";
-  height: 20rem;
-  max-width: 1000px;
-  width: 50rem;
+  height: 42.5rem;
+  width: 60rem;
   touch-action: none;
   user-select: none;
   z-index: 2;
 }
 
-#terminal-header {
-
+.buttons {
+  flex-direction: row;
+  display: flex;
 }
 
 .panel-button {
   border-radius: 50%;
+  line-height: 0;
   margin-right: 0.4rem;
+  position: relative;
   height: 0.75rem;
   width: 0.75rem;
 }
@@ -89,6 +91,36 @@ body {
 .panel-button.red {
   background: #f96256;
   border: 1px solid #f65549;
+}
+
+.panel-button::after {
+  color: rgb(60,60,60);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  position: relative;
+  visibility: hidden;
+}
+
+.panel-button.red::after {
+  content: '\00d7';
+  top: -5.1px;
+  right: -1.6px;
+}
+
+.panel-button.yellow::after {
+  content: '\2013';
+  top: -6.2px;
+  right: -2.4px;
+}
+
+.panel-button.green::after {
+  content: '+';
+  top: -4.9px;
+  right: -1.7px;
+}
+
+.buttons:hover .panel-button::after {
+  visibility: visible;
 }
 
 .panel-button.yellow {
@@ -145,9 +177,10 @@ p {
 }
 
 #chrome {
+  background: #fff;
+  display: none;
   height: 600px;
   width: 600px;
-  background: #fff;
 }
 
 #dock {
