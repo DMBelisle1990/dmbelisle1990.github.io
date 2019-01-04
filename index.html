@@ -22,17 +22,47 @@
         </div>
       </div>
       <div id="terminal-body">
-        <p>$ <span id="name"></span></p>
+        <p id="whoami" class="active command"></p>
+        <p id="my-name">Daniel Belisle</p>
+        <p id="ls" class="command"></p>
+        <div id="my-contact">
+          <a href="">github</a>
+          <a href="">linkedIn</a>
+          <a href="">email</a>
+          <a href="">resume</a>
+        </div>
+        <p id="blank" class="command"></p>
       </div>
     </div>
     <div id="chrome" class="panel">
       <div id="chrome-header" class="panel-header">
-        <div class="panel-button red"></div>
-        <div class="panel-button yellow"></div>
-        <div class="panel-button green"></div>
+        <div class="buttons">
+          <div class="panel-button red"></div>
+          <div class="panel-button yellow"></div>
+          <div class="panel-button green"></div>
+        </div>
+        <div class="tabs">
+          <div class="tab active">
+            <div class="tab-title">
+              tab 1
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-title">
+              tab 2
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-title">
+              tab 3
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="panel-body">
-        <!-- <iframe src="https://www.abcmouse.com" frameborder="0"></iframe> -->
+      <div class="panel-body windows">
+        <div class="window active">window 1</div>
+        <div class="window">window 2</div>
+        <div class="window">window 3</div>
       </div>
     </div>
     <div id="dock">
@@ -52,12 +82,15 @@
       </div>
       <div id="trash">
         <div class="dock-title">Trash</div>
-        <img src="./assets/images/trash-icon.png">
+        <a href="https://github.com/DMBelisle1990">
+          <img src="./assets/images/trash-icon.png">
+        </a>
       </div>
     </div>
   </section>
-  <script src="js/drag.js" async></script>
   <script src="js/terminal.js" async></script>
-  <script src="js/click.js" async></script>
+  <script src="js/chrome.js" async></script>
+  <script src="js/drag.js" async></script>
+  <script src="js/dock.js" async></script>
 </body>
 </html>

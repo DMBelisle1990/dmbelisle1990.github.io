@@ -7,13 +7,13 @@
 
   about.addEventListener('click', () => {
     panels.forEach((panel) => panel.classList.remove('last-clicked'));
-    terminal.style.display = 'block';
+    terminal.style.display = 'flex';
     terminal.classList.add('last-clicked');
   });
 
   work.addEventListener('click', () => {
     panels.forEach((panel) => panel.classList.remove('last-clicked'));
-    chrome.style.display = 'block';
+    chrome.style.display = 'flex';
     chrome.classList.add('last-clicked');
   });
 })();

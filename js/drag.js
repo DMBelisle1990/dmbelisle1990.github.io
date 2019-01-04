@@ -1,6 +1,31 @@
 (function() {
   const panels = document.querySelectorAll('.panel');
   const desktop = document.getElementById('desktop');
+  const dock = document.getElementById('dock');
+
+  function addButtonEvents(panel) {
+    const closeButton = panel.querySelector('.red');
+    const maxButton = panel.querySelector('.green');
+    const minButton = panel.querySelector('.yellow');
+
+    if (closeButton) {
+      closeButton.addEventListener('click', () => panel.style.display = 'none');
+    }
+
+    if (maxButton) {
+      maxButton.addEventListener('click', () => {
+        dock.style.display = 'none';
+        panel.classList.add('full-screen');
+      });
+    }
+
+    if (minButton) {
+      minButton.addEventListener('click', () => {
+        dock.style.display = 'flex';
+        panel.classList.remove('full-screen');
+      });
+    }
+  }
 
   // TODO: Add these for mobile
   // desktop.addEventListener("touchstart", dragStart, false);
@@ -11,7 +36,7 @@
    * itself may be grabbed.
    */
   panels.forEach((panel) => {
-    panel.addEventListener('mousedown', (e) => {
+    panel.addEventListener('mousedown', () => {
       panels.forEach((panel) => panel.classList.remove('last-clicked'));
       panel.classList.add('last-clicked');
     });
@@ -27,10 +52,7 @@
       };
     });
 
-    const closeButton = panel.querySelector('.red');
-    if (closeButton) {
-      closeButton.addEventListener('click', () => panel.style.display = 'none');
-    }
+    addButtonEvents(panel);
 
     desktop.addEventListener('mouseup', () => {
       desktop.onmousemove = null

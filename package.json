@@ -1,0 +1,24 @@
+{
+  "name": "danielbelisle.com",
+  "version": "1.0.0",
+  "description": "Simple web portfolio and resume",
+  "main": "index.js",
+  "dependencies": {
+    "parcel-bundler": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DMBelisle1990/dbelisle.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DMBelisle1990/dbelisle.com/issues"
+  },
+  "homepage": "https://github.com/DMBelisle1990/dbelisle.com#readme"
+}
