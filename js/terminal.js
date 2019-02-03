@@ -1,14 +1,18 @@
 (function() {
-  // TODO: Add randomness to typeSpeed and startDelay
   const typeSpeed = 60;
-  const typeDelay = 700;
+  const typeDelay = 1000;
   const enterDelay = 300;
   const blank = document.getElementById('blank');
   const terminalLines = [
     {
       activeEl: document.getElementById('ls'),
-      command: 'ls',
+      command: 'ls contact-info',
       resultingEl: document.getElementById('my-contact')
+    },
+    {
+      activeEl: document.getElementById('cat'),
+      command: 'cat description.txt',
+      resultingEl: document.getElementById('my-description')
     },
     {
       activeEl: document.getElementById('whoami'),

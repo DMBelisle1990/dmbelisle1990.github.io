@@ -9,19 +9,23 @@
     const minButton = panel.querySelector('.yellow');
 
     if (closeButton) {
-      closeButton.addEventListener('click', () => panel.style.display = 'none');
+      closeButton.addEventListener('click', () => {
+        panel.style.display = 'none';
+        panel.classList.remove('full-screen');
+        dock.classList.remove('collapsed');
+      });
     }
 
     if (maxButton) {
       maxButton.addEventListener('click', () => {
-        dock.style.display = 'none';
+        dock.classList.add('collapsed');
         panel.classList.add('full-screen');
       });
     }
 
     if (minButton) {
       minButton.addEventListener('click', () => {
-        dock.style.display = 'flex';
+        dock.classList.remove('collapsed');
         panel.classList.remove('full-screen');
       });
     }
@@ -54,9 +58,7 @@
 
     addButtonEvents(panel);
 
-    desktop.addEventListener('mouseup', () => {
-      desktop.onmousemove = null
-    });
+    desktop.addEventListener('mouseup', () => desktop.onmousemove = null);
 
     desktop.addEventListener('mouseout', (e) => {
       const from = e.relatedTarget || e.toElement;

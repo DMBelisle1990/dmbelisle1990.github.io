@@ -7,6 +7,7 @@
 }
 
 body {
+  background: rgb(30, 30, 30);
   color: rgb(60,60,60);
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -21,7 +22,7 @@ a {
 
 #desktop {
   align-items: center;
-  background: rgb(72, 72, 72);
+  background: rgb(30, 30, 30);
   background: url(../assets/images/desktop-bg.jpeg) 50% 50% / cover no-repeat;
   display: flex;
   flex-direction: column;
@@ -45,19 +46,14 @@ a {
   flex-direction: column;
 }
 
-.panel:hover,
-.panel:active {
-  overflow: hidden;
-  resize: both;
-}
-
 .panel-header {
   background: #f8f8f8;
   background: linear-gradient(#f5f5f5, #c5c5c5);
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  padding: 0.4rem;
   display: flex;
+  flex: 0 0 auto;
+  padding: 0.4rem;
 }
 
 .panel.full-screen {
@@ -80,27 +76,32 @@ a {
   display: flex;
   flex-direction: column;
   font-family: "Courier New", "Courier";
-  height: 22.5rem;
-  width: 38rem;
+  height: 20.5rem;
+  width: 33rem;
   touch-action: none;
   user-select: none;
-  left: 10%;
-  top: 8%;
+  left: 5%;
+  top: 10%;
   word-break: break-all;
   z-index: 2;
 }
 
-#terminal p {
-  font-size: 3.2rem;
-}
-
 #terminal .command {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  opacity: 0.6;
 }
 
 p.command::before {
   content: '$';
-  margin-right: 1.2rem;
+  margin-right: 0.6rem;
+}
+
+.result {
+  margin-bottom: 1.4rem;
+}
+
+#my-contact, #terminal #my-description, #my-name {
+  font-size: 1.7rem;
 }
 
 #terminal-body {
@@ -117,8 +118,8 @@ p.active::after {
   opacity: 1;
   font-weight: 100;
   position: relative;
-  top: -0.2rem;
-  left: -0.8rem;
+  top: -0.07rem;
+  left: -0.2rem;
   -webkit-animation: blink 0.7s infinite;
   -moz-animation: blink 0.7s infinite;
   -ms-animation: blink 0.7s infinite;
@@ -132,8 +133,12 @@ p.active::after {
   100% { opacity: 1; }
 }
 
-#ls, #my-name, #my-contact, #blank {
+#ls, #my-name, #my-contact, #blank, #cat, #my-description {
   display: none;
+}
+
+#my-name {
+  line-height: 0.9;
 }
 
 .buttons {
@@ -163,8 +168,8 @@ p.active::after {
   font-size: 0.7rem;
   position: relative;
   visibility: hidden;
-  top: -5px;
-  left: 2px;
+  top: 4.8px;
+  left: 1.8px;
 }
 
 .panel-button.red::after {
@@ -173,16 +178,25 @@ p.active::after {
 
 .panel-button.yellow::after {
   content: '\2013';
-  top: -6px;
+  top: 4px;
 }
 
 .panel-button.green::after {
   content: '+';
 }
 
+#chrome {
+  background: #fff;
+  display: none;
+  overflow: hidden;
+  top: 3%;
+  height: 35rem;
+  width: 50rem;
+}
+
 #chrome .panel-button::after {
   top: 4px;
-  left: 1.4px;
+  left: 2px;
 }
 
 #chrome .panel-button.yellow::after {
@@ -192,6 +206,48 @@ p.active::after {
 
 .buttons:hover .panel-button::after {
   visibility: visible;
+}
+
+#url-wrapper {
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  display: flex;
+  flex: 0 0 auto;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  height: 35px;
+}
+
+#url-arrows {
+  align-items: center;
+  display: flex;
+}
+
+#url-arrows img {
+  margin-right: 0.7rem;
+  width: 1.2rem;
+}
+
+#url {
+  align-items: center;
+  background: rgba(0,0,0,0.05);
+  border-radius: 1rem;
+  display: flex;
+  padding: 0.2rem 1.5rem;
+  height: 100%;
+  width: 100%;
+}
+
+#back-arrow {
+  transform: rotate(135deg);
+}
+
+#forward-arrow {
+  transform: rotate(-45deg);
+}
+
+#url-arrows #refresh {
+  width: 0.9rem;
 }
 
 .panel-button.yellow {
@@ -205,101 +261,75 @@ p.active::after {
 }
 
 .panel-body {
-  flex: 1;
-}
-
-iframe {
-  width: 100%;
-  height: 100%;
-}
-
-#chrome {
-  background: #fff;
-  display: none;
-  height: 600px;
-  width: 600px;
-}
-
-#chrome-header {
-  padding: 0 0 0 0.4rem;
-}
-
-.tabs {
   display: flex;
-  padding-top: 0.4rem;
 }
 
-.tab-title {
-  border-left: 1px solid rgba(0,0,0,0.3);
-  padding: 0 0.75rem;
+#chrome .panel-body {
+  flex-direction: column;
+  justify-content: center;
 }
 
-.tab {
-  cursor: pointer;
-  padding: 0.4rem 0;
-  -webkit-transition: background-color 100ms ease-in-out;
-  -ms-transition: background-color 100ms ease-in-out;
-  transition: background-color 100ms ease-in-out;
+#projects {
+  overflow: auto;
+  padding: 3rem;
 }
 
-.tab:first-of-type .tab-title,
-.tab:first-of-type:hover .tab-title {
-  border-left: 1px solid rgba(0,0,0,0);
-}
-
-.tab:last-of-type .tab-title {
-  border-right: 1px solid rgba(0,0,0,0.3);
-}
-
-.tab:hover {
-  border-top-left-radius: 0.4rem;
-  border-top-right-radius: 0.4rem;
-  cursor: pointer;
-}
-
-.tab:hover .tab-title {
-  border-left: 1px solid rgba(0,0,0,0);
-}
-
-.tab.active {
-  background: #fff !important;
-  border-top-left-radius: 0.4rem;
-  border-top-right-radius: 0.4rem;
-  -webkit-transition: none;
-  -ms-transition: none;
-  transition: none;
-}
-
-.tab.active .tab-title {
-  border-left: 1px solid rgba(0,0,0,0);
-}
-
-.tab.active + .tab .tab-title,
-.tab:hover + .tab .tab-title {
-  border-left: 1px solid rgba(0,0,0,0);
-}
-
-.tab:last-of-type.active .tab-title,
-.tab:last-of-type:hover .tab-title {
-  border-right: 1px solid rgba(0,0,0,0);;
-}
-
-.tab:hover {
-  background: rgb(239, 239, 239);
-}
-
-.windows {
+.project-card {
+  align-items: center;
+  box-shadow: 0.1rem 0.3rem 1rem rgba(0,0,0,0.25);
+  border-radius: 0.3rem;
   display: flex;
-  flex: 1;
+  margin: 0 auto 2.5rem;
+  padding: 1.8rem 1rem;
+  height: 16rem;
+  width: 40rem;
 }
 
-.window {
-  display: none;
-  flex: 1;
+.project-card h3 {
+  margin: 0 0 0.3rem 0;
 }
 
-.window.active {
-  display: flex;
+.project-card a {
+  color: #0096cc;
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.project-img {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.project-img img {
+  width: 12rem;
+}
+
+#abcmouse-img {
+  width: 8.5rem;
+}
+
+#aa-icon-img {
+  width: 9rem;
+}
+
+#aofljs-img {
+  width: 10rem;
+}
+
+.project-details {
+  flex: 1 1 60%;
+  padding: 0 1.5rem;
+}
+
+.project-details p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.project-details a:hover {
+  color: #91b3bf;
 }
 
 #dock {
@@ -312,9 +342,17 @@ iframe {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   display: flex;
+  margin-bottom: 0;
+  min-height: 5.87rem;
+  min-width: 21.087rem;
   position: fixed;
   bottom: 0;
   z-index: 2000;
+  transition: transform .1s ease-in-out;
+}
+
+#dock.collapsed {
+  transform: translateY(100%);
 }
 
 #dock > div {
@@ -374,7 +412,7 @@ iframe {
   cursor: pointer;
 }
 
-#dock div img {
+#dock div:not(#work) img {
   margin-right: 0.4rem;
 }
 
@@ -383,6 +421,7 @@ iframe {
 }
 
 #work img {
+  margin-right: 0.5rem;
   width: 4.5rem;
 }
 

@@ -1,0 +1,152 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0;
+}
+
+div.accessible {
+  position: absolute;
+  left: 110%;
+  top: -3000px;
+}
+
+.page-size {
+  width: 300px;
+  height: 600px;
+}
+
+#banner {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid lightgrey;
+  box-sizing: border-box;
+}
+
+#banner img {
+  position: absolute;
+  top: 0;
+}
+
+#grey-bar {
+  position: absolute;
+  top: 408px;
+  width: 300px;
+  height: 180px;
+  background-color: #151110;
+}
+
+#banner #background {
+  width: 300px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#card-layer,#shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sprite {
+  background: url(sprite.9dd39721.png);
+  background-size: 461px 211px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#fivePts {
+  background-position: 0 0;
+  width: 182px;
+  height: 43px;
+  top: 476px;
+  left: 68px;
+  -webkit-transform: translate3d(0,0,0);
+}
+
+#bonusPtsWhite {
+  background: url(sprite.9dd39721.png);
+  background-size: 463px 211px;
+  position: absolute;
+  background-position: 0 -42px;
+  width: 224px;
+  height: 123px;
+  top: 28px;
+  left: 49px;
+  opacity: 0;
+}
+
+#bonusPtsDark {
+  position: relative;
+  left: 49px;
+  width: 203px;
+  overflow: hidden;
+  height: 152px;
+}
+
+#bonusPtsDark span {
+  background: url(sprite.9dd39721.png) fixed;
+  background-size: 461px 211px;
+  position: absolute;
+  background-position: -169px -14px;
+  width: 224px;
+  height: 96px;
+  top: 61px;
+  left: 49px;
+  opacity: 0;
+}
+
+#freeNight {
+  background-position: -191px 0;
+  width: 215px;
+  height: 35px;
+  top: 477px;
+  left: 44px;
+  opacity: 0;
+}
+
+#learnMore {
+  background-position: 0 -170px;
+  width: 130px;
+  height: 35px;
+  top: 532px;
+  left: 86px;
+}
+
+#learnMore a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#card {
+  position: absolute;
+  background-position: 0 0;
+  width: 126px;
+  height: 80px;
+  top: 381px;
+  left: 86px;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px -2px 20px 1px rgba(40,40,40,.8);
+  -moz-box-shadow: 0px -2px 20px 1px rgba(40,40,40,.8);
+  box-shadow: 0px -2px 20px 1px rgba(40,40,40,.8);
+}
+
+#cardShine {
+  position: absolute;
+  top: -220%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  transform: rotate(30deg);
+  background: linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 70%,rgba(255,255,255,0.4) 85%,rgba(255,255,255,0.0) 100% );
+  -webkit-transition: left 1.6s ease, top 1.6s ease;
+  -moz-transition: left 1.6s ease, top 1.6s ease;
+  transition: left 1.6s ease, top 1.6s ease;
+}

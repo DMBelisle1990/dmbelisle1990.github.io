@@ -23,13 +23,15 @@
       </div>
       <div id="terminal-body">
         <p id="whoami" class="active command"></p>
-        <p id="my-name">Daniel Belisle</p>
+        <p id="my-name" class="result">Daniel Belisle</p>
+        <p id="cat" class="command"></p>
+        <p id="my-description" class="result">Frontend Developer</p>
         <p id="ls" class="command"></p>
-        <div id="my-contact">
-          <a href="">github</a>
-          <a href="">linkedIn</a>
-          <a href="">email</a>
-          <a href="">resume</a>
+        <div id="my-contact" class="result">
+          <a href="https://github.com/DMBelisle1990">github</a>
+          <a href="https://www.linkedin.com/in/daniel-belisle">linkedIn</a>
+          <a href="mailto:danielmbelisle@gmail.com">email</a>
+          <a href="assets/resume.pdf">resume</a>
         </div>
         <p id="blank" class="command"></p>
       </div>
@@ -41,56 +43,128 @@
           <div class="panel-button yellow"></div>
           <div class="panel-button green"></div>
         </div>
-        <div class="tabs">
-          <div class="tab active">
-            <div class="tab-title">
-              tab 1
+      </div>
+      <div class="panel-body">
+        <div id="url-wrapper">
+          <div id="url-arrows">
+            <img id="back-arrow" src="assets/images/arrow.svg"></img>
+            <img id="forward-arrow" src="assets/images/arrow.svg"></img>
+            <img id="refresh" src="assets/images/refresh.svg"></img>
+          </div>
+          <div id="url">myprojects.com</div>
+        </div>
+        <div id="projects">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/chase.png" alt="Chase Marriott">
+            </div>
+            <div class="project-details">
+              <h3>Chase Marriott</h3>
+              <a href="banners/chase/index.html">demo</a>
+              <p>
+                It was an educational experience creating these banners. Each banner had to be under 100KB. Accessibility and browser compatability was the number one priority.
+              </p>
             </div>
           </div>
-          <div class="tab">
-            <div class="tab-title">
-              tab 2
+          <div class="project-card">
+            <div class="project-img">
+              <img id="aa-icon-img" src="assets/images/aa-icon.png" alt="adventure academy">
+            </div>
+            <div class="project-details">
+              <h3>Adventure Academy</h3>
+              <a href="http://www.adventureacademy.com">www.adventureacademy.com</a>
+              <p>
+                Adventure Academy was the first website built using AofLjs, a custom js framework designed to handle the business needs of Age of Learning.
+              </p>
             </div>
           </div>
-          <div class="tab">
-            <div class="tab-title">
-              tab 3
+          <div class="project-card">
+            <div class="project-img">
+              <img id="aofljs-img" src="assets/images/aofljs.png" alt="aofljs">
+            </div>
+            <div class="project-details">
+              <h3>AofLjs</h3>
+              <a href="https://github.com/AgeOfLearning/aofl">github</a>
+              <p>
+                AofLjs is a custom js framework built specifically to handle the business needs of Age of Learning. It was an amazing opportunity developing a framework from the ground up.
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-img">
+              <img id="abcmouse-img" src="assets/images/abcmouse.png" alt="abcmouse.com">
+            </div>
+            <div class="project-details">
+              <h3>abcmouse.com</h3>
+              <a href="https://www.abcmouse.com">www.abcmouse.com</a>
+              <p>
+                A refactor of the original abcmouse.com, built in Polymer
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/mouse.png" alt="abcmouse.jp">
+            </div>
+            <div class="project-details">
+              <h3>abcmouse.jp</h3>
+              <a href="http://www.abcmouse.jp">www.abcmouse.jp</a>
+              <p>
+                A complete rebuild of the abcmouse.com homepage in Polymer for it's Japanese counterpart.
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/dex-ss.png" alt="abcmouse.jp">
+              <img src="assets/images/dex.png" alt="abcmouse.jp">
+            </div>
+            <div class="project-details">
+              <h3>Dex Media</h3>
+              <a href="banners/dex/index.html">demo</a>
+              <p>
+                I loved creating these animations as it was an excellent opportunity to be creative. It started with a PSD and the rest was up to me.
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/polaris-mobile.jpg" alt="polaris">
+            </div>
+            <div class="project-details">
+              <h3>Polaris</h3>
+              <a href="http://www.polaris-pm.com/">www.polaris-pm.com</a>
+              <p>
+                The Polaris team was looking for a website to deliver a memorable and unique experience. Built with wordpress.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="panel-body windows">
-        <div class="window active">window 1</div>
-        <div class="window">window 2</div>
-        <div class="window">window 3</div>
       </div>
     </div>
     <div id="dock">
       <div id="about">
         <div class="dock-title">About</div>
-        <img src="./assets/images/terminal-icon.svg">
+        <img src="assets/images/terminal-icon.svg">
       </div>
       <div id="work">
         <div class="dock-title">Projects</div>
-        <img src="./assets/images/chrome-icon.svg">
+        <img src="assets/images/chrome-icon.svg">
       </div>
       <div id="contact">
         <div class="dock-title">Contact</div>
         <a href="mailto:danielmbelisle@gmail.com">
-          <img src="./assets/images/gmail-icon.svg">
+          <img src="assets/images/gmail-icon.svg">
         </a>
       </div>
       <div id="trash">
         <div class="dock-title">Trash</div>
         <a href="https://github.com/DMBelisle1990">
-          <img src="./assets/images/trash-icon.png">
+          <img src="assets/images/trash-icon.png">
         </a>
       </div>
     </div>
   </section>
-  <script src="js/terminal.js" async></script>
-  <script src="js/chrome.js" async></script>
-  <script src="js/drag.js" async></script>
-  <script src="js/dock.js" async></script>
+  <script src="/index.js" async></script>
 </body>
 </html>
