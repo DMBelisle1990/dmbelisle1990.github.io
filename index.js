@@ -1,3 +1,3 @@
-import "./js/dock";
-import "./js/drag";
-import "./js/terminal";
+import "./js/dock.js";
+import "./js/drag.js";
+import "./js/terminal.js";
