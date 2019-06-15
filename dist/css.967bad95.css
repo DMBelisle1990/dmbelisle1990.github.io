@@ -267,6 +267,7 @@ p.active::after {
 #chrome .panel-body {
   flex-direction: column;
   justify-content: center;
+  overflow: scroll;
 }
 
 #projects {
