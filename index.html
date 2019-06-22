@@ -13,7 +13,7 @@
 
 <body>
   <section id="desktop">
-    <div id="terminal" class="panel">
+    <div id="terminal" class="panel hide-mobile">
       <div id="terminal-header" class="panel-header">
         <div class="buttons">
           <div class="panel-button red"></div>
@@ -145,13 +145,16 @@
       </div>
     </div>
     <div id="dock">
-      <div id="about">
+      <div id="about" class="hide-mobile">
         <div class="dock-title">About</div>
         <img src="assets/images/terminal-icon.svg">
       </div>
       <div id="work">
         <div class="dock-title">Projects</div>
-        <img src="assets/images/chrome-icon.svg">
+        <picture>
+          <source srcset="assets/images/chrome-icon-mobile.svg" media="(max-width: 568px)">
+          <img src="assets/images/chrome-icon.svg">
+        </picture>
       </div>
       <div id="contact">
         <div class="dock-title">Contact</div>
@@ -159,7 +162,7 @@
           <img src="assets/images/gmail-icon.svg">
         </a>
       </div>
-      <div id="trash">
+      <div id="trash" class="hide-mobile">
         <div class="dock-title">Trash</div>
         <a href="https://github.com/DMBelisle1990">
           <img src="assets/images/trash-icon.png">

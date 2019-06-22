@@ -440,5 +440,20 @@ p.active::after {
 }
 
 @media only screen and (max-width: 568px)  {
+  .hide-mobile {
+    display: none !important;
+  }
 
+  #desktop {
+    background: url(mobile-bg.b4ef18fb.jpg) 50% 50% / cover no-repeat;
+  }
+
+  #dock {
+    background-color: rgba(235,235,235,0.5);
+    bottom: 1rem;
+    border-radius: 1rem;
+    justify-content: center;
+    min-width: auto;
+    width: 90%;
+  }
 }
