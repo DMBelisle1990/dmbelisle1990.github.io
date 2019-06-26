@@ -4,16 +4,20 @@
   const terminal = document.getElementById('terminal');
   const chrome = document.getElementById('chrome');
   const panels = document.querySelectorAll('.panel');
+  const dock = document.getElementById('dock');
 
-  about.addEventListener('click', () => {
-    panels.forEach((panel) => panel.classList.remove('last-clicked'));
-    terminal.style.display = 'flex';
-    terminal.classList.add('last-clicked');
-  });
+  function showPanel(panel) {
+    panels.forEach((p) => p.classList.remove('last-clicked'));
+    panel.style.display = 'flex';
+    panel.classList.add('last-clicked');
+  }
 
-  work.addEventListener('click', () => {
-    panels.forEach((panel) => panel.classList.remove('last-clicked'));
-    chrome.style.display = 'flex';
-    chrome.classList.add('last-clicked');
+  about.addEventListener('click', () => showPanel(terminal));
+
+  work.addEventListener('click', () => showPanel(chrome));
+
+  work.addEventListener('touchstart', () => {
+    // dock.classList.add('collapsed');
+    showPanel(chrome);
   });
 })();

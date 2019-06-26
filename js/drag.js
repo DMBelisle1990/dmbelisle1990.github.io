@@ -31,10 +31,6 @@
     }
   }
 
-  // TODO: Add these for mobile
-  // desktop.addEventListener("touchstart", dragStart, false);
-  // desktop.addEventListener("touchend", dragEnd, false);
-
   /**
    * Find all panels and make them draggable. If no panel-header is found the panel
    * itself may be grabbed.

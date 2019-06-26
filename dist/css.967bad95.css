@@ -353,7 +353,7 @@ p.active::after {
 }
 
 #dock.collapsed {
-  transform: translateY(100%);
+  transform: translateY(120%);
 }
 
 #dock > div {
@@ -444,8 +444,52 @@ p.active::after {
     display: none !important;
   }
 
+  .panel {
+    border-radius: 0;
+  }
+
   #desktop {
     background: url(mobile-bg.b4ef18fb.jpg) 50% 50% / cover no-repeat;
+  }
+
+  #chrome {
+    width: 100%;
+    height: 100%;
+    left: auto;
+    top: auto;
+  }
+
+  #projects {
+    padding: 1rem;
+  }
+
+  .project-card {
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+  }
+
+  .project-img {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .project-details {
+    text-align: center;
+  }
+
+  .project-details p {
+    text-align: center;
+  }
+
+  .project-card a {
+    margin-bottom: 1rem;
+  }
+
+  #dex-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   #dock {
@@ -453,6 +497,7 @@ p.active::after {
     bottom: 1rem;
     border-radius: 1rem;
     justify-content: center;
+    max-width: 400px;
     min-width: auto;
     width: 90%;
   }

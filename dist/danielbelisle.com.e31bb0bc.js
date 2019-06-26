@@ -111,19 +111,25 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   var terminal = document.getElementById('terminal');
   var chrome = document.getElementById('chrome');
   var panels = document.querySelectorAll('.panel');
-  about.addEventListener('click', function () {
-    panels.forEach(function (panel) {
-      return panel.classList.remove('last-clicked');
+  var dock = document.getElementById('dock');
+
+  function showPanel(panel) {
+    panels.forEach(function (p) {
+      return p.classList.remove('last-clicked');
     });
-    terminal.style.display = 'flex';
-    terminal.classList.add('last-clicked');
+    panel.style.display = 'flex';
+    panel.classList.add('last-clicked');
+  }
+
+  about.addEventListener('click', function () {
+    return showPanel(terminal);
   });
   work.addEventListener('click', function () {
-    panels.forEach(function (panel) {
-      return panel.classList.remove('last-clicked');
-    });
-    chrome.style.display = 'flex';
-    chrome.classList.add('last-clicked');
+    return showPanel(chrome);
+  });
+  work.addEventListener('touchstart', function () {
+    // dock.classList.add('collapsed');
+    showPanel(chrome);
   });
 })();
 },{}],"js/drag.js":[function(require,module,exports) {
@@ -158,10 +164,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         panel.classList.remove('full-screen');
       });
     }
-  } // TODO: Add these for mobile
-  // desktop.addEventListener("touchstart", dragStart, false);
-  // desktop.addEventListener("touchend", dragEnd, false);
-
+  }
   /**
    * Find all panels and make them draggable. If no panel-header is found the panel
    * itself may be grabbed.
@@ -292,7 +295,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51832" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56077" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
