@@ -18,6 +18,7 @@
 
     if (maxButton) {
       maxButton.addEventListener('click', () => {
+        if (window.innerWidth < 821) return;
         dock.classList.add('collapsed');
         panel.classList.add('full-screen');
       });
@@ -25,6 +26,7 @@
 
     if (minButton) {
       minButton.addEventListener('click', () => {
+        if (window.innerWidth < 821) return;
         dock.classList.remove('collapsed');
         panel.classList.remove('full-screen');
       });

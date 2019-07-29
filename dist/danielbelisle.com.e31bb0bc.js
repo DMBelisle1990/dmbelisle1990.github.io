@@ -113,6 +113,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   var panels = document.querySelectorAll('.panel');
   var dock = document.getElementById('dock');
 
+  if (window.innerWidth < 821) {
+    dock.classList.add('collapsed');
+    setTimeout(function () {
+      dock.style.display = 'flex';
+    }, 300);
+  }
+
   function showPanel(panel) {
     panels.forEach(function (p) {
       return p.classList.remove('last-clicked');
@@ -124,11 +131,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   about.addEventListener('click', function () {
     return showPanel(terminal);
   });
+  about.addEventListener('touchstart', function () {
+    dock.classList.add('collapsed');
+    showPanel(terminal);
+  });
   work.addEventListener('click', function () {
     return showPanel(chrome);
   });
   work.addEventListener('touchstart', function () {
-    // dock.classList.add('collapsed');
+    dock.classList.add('collapsed');
     showPanel(chrome);
   });
 })();
@@ -153,6 +164,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
     if (maxButton) {
       maxButton.addEventListener('click', function () {
+        if (window.innerWidth < 821) return;
         dock.classList.add('collapsed');
         panel.classList.add('full-screen');
       });
@@ -160,6 +172,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
     if (minButton) {
       minButton.addEventListener('click', function () {
+        if (window.innerWidth < 821) return;
         dock.classList.remove('collapsed');
         panel.classList.remove('full-screen');
       });
@@ -295,7 +308,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56077" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63988" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

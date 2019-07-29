@@ -13,7 +13,7 @@
 
 <body>
   <section id="desktop">
-    <div id="terminal" class="panel hide-mobile">
+    <div id="terminal" class="panel">
       <div id="terminal-header" class="panel-header">
         <div class="buttons">
           <div class="panel-button red"></div>
@@ -37,7 +37,7 @@
       </div>
     </div>
     <div id="chrome" class="panel">
-      <div id="chrome-header" class="panel-header hide-mobile">
+      <div id="chrome-header" class="panel-header">
         <div class="buttons">
           <div class="panel-button red"></div>
           <div class="panel-button yellow"></div>
@@ -145,25 +145,33 @@
       </div>
     </div>
     <div id="dock">
-      <div id="about" class="hide-mobile">
+      <div id="about">
         <div class="dock-title">About</div>
-        <img src="assets/images/terminal-icon.svg">
+        <div class="dock-img-wrapper">
+          <img src="assets/images/terminal-icon.svg">
+        </div>
       </div>
       <div id="work">
         <div class="dock-title">Projects</div>
-        <img src="assets/images/chrome-icon.svg">
+        <div class="dock-img-wrapper">
+          <img src="assets/images/chrome-icon.svg">
+        </div>
       </div>
       <div id="contact">
         <div class="dock-title">Contact</div>
-        <a href="mailto:danielmbelisle@gmail.com">
-          <img src="assets/images/gmail-icon.svg">
-        </a>
+        <div class="dock-img-wrapper">
+          <a href="mailto:danielmbelisle@gmail.com">
+            <img src="assets/images/gmail-icon.svg">
+          </a>
+        </div>
       </div>
       <div id="trash" class="hide-mobile">
         <div class="dock-title">Trash</div>
-        <a href="https://github.com/DMBelisle1990">
-          <img src="assets/images/trash-icon.png">
-        </a>
+        <div class="dock-img-wrapper">
+          <a href="https://github.com/DMBelisle1990">
+            <img src="assets/images/trash-icon.png">
+          </a>
+        </div>
       </div>
     </div>
   </section>
